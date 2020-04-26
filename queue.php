@@ -39,7 +39,7 @@ while (true) {
 	} else {
 		foreach ( $list as $v ) {
 			
-			if (send_email('smtp.aliyun.com', 'zhouweiji@aliyun.com', 'zhouweiji000.', 'aliyun', $v['email'], 'sina', '从数据库中获取邮件进行队列发送'.$v['id'], file_get_contents( $dir_root.'/reg.html' ))) {
+			if (send_email('smtp.aliyun.com', 'xxxx@aliyun.com', 'xxxxmima', 'aliyun', $v['email'], 'sina', '从数据库中获取邮件进行队列发送'.$v['id'], file_get_contents( $dir_root.'/reg.html' ))) {
 				$sql = 'UPDATE queue SET status=1,update_at='.time().' WHERE id='.$v['id'];
 				@mysql_query($sql);
 			}
